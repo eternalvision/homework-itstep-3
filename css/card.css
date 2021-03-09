@@ -1,0 +1,39 @@
+.cards{
+    margin-top: 10px;
+    background-color: var(--nav-bg-color);
+    box-shadow: var(--shadow-main);
+    color: var(--nav-text-color);
+    padding: 30px;
+}
+.card-center{
+    background-color:var(--bg-color);
+    box-shadow: var(--shadow-main);
+    padding: 30px;
+    text-align: center;
+}
+.player-card{
+        text-align: center;
+    padding: 30px;
+    margin-top: 10px;
+
+    background-color: var(--nav-bg-color);
+    box-shadow: var(--shadow-main);
+    color: var(--nav-text-color);
+
+    font-weight: 400;
+    font-size: 20px;
+}
+.cards li{
+    display: inline-block;
+    background-color: var(--nav-bg-color);
+    box-shadow: var(--shadow-main);
+
+    padding: 10px;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 20px;
+    /* border: 1px solid white; */
+}
+.redly{
+    color:red;
+}
