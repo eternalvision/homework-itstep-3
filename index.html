@@ -57,8 +57,10 @@
           </svg>
         </button>
         <!--  -->
-        <form action="">
-          <input type="text" disabled /> <br />
+        <form name="form_modal" autocomplete="on" novalidate class="form-modal">
+          <label for="not-active">Не активно</label
+          ><input type="not-text" id="not-active" disabled />
+          <label for="message">Активно</label>
           <input type="text" id="message" />
         </form>
         <h3 id="widget-title">Сообщения:</h3>
@@ -70,8 +72,43 @@
           <li>Сообщение 5</li>
           <li><a href="#">...</a></li>
         </ul>
-        <a href="http://site.com/list.zip">Ссылка на архив</a>
-        <a href="http://site.com/list.pdf">Ссылка на PDF</a>
+        <a class="links-modal" href="http://site.com/list.zip"
+          >Ссылка на архив</a
+        >
+        <a class="links-modal" href="http://site.com/list.pdf">Ссылка на PDF</a>
+        <h1>Текстовый Вариант Ниже</h1>
+        <textarea
+          class="textarea-modal"
+          name="feedback"
+          rows="5"
+          placeholder="Type your message here..."
+        >
+1. Выбрать input типа disabled.
+
+Ответ: input[disabled]{ background-color:#983b45; }
+------------------------------------------------------------------------------------
+2. Найти все элементы с class=message-*. * - любое значение
+
+Ответ: [class="messages"]{ background-color: rgba(165, 42, 42, 0.24); }
+------------------------------------------------------------------------------------
+3. Выбрать все чётные элементы списка .messages.
+
+Ответ: .messages li:nth-child(even){ color:red; }
+------------------------------------------------------------------------------------
+4. Выбрать один элемент сразу за заголовком h3 на том же уровне вложенности.
+
+Ответ: #widget-title + ul{ border: 1px solid brown; border-radius: 4px; margin: 10px; }
+------------------------------------------------------------------------------------
+5. Выбрать все ссылки, следующие за заголовком #widget-title на том же уровне вложенности.
+
+Ответ: #widget-title ~ a{ font-style:italic; }
+------------------------------------------------------------------------------------
+6. Выбрать ссылку внутри последнего элемента списка .messages
+
+Ответ: ul li a{ background-color:brown; }
+------------------------------------------------------------------------------------
+      </textarea
+        >
       </div>
     </div>
     <!--  -->
