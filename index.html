@@ -7,18 +7,89 @@
     <title>Homework-3</title>
     <link rel="stylesheet" href="./css/modern-normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/modal.css" />
   </head>
   <body>
     <main>
       <section class="section">
-        <ol>
-          <li>Apple</li>
-          <li>Orange</li>
-          <li>Pineapple</li>
-          <li>Pear</li>
-          <li>Cherry</li>
+        <div class="modal-homework-1">
+          <a class="hero-button" data-modal-open href="#">Домашняя работа 1</a>
+        </div>
+
+        <ol class="homework-2">
+          <li><h2>↓ Домашняя работа 2 ↓</h2></li>
+          <li class="list-work">
+            <a class="link-fruts" href="#">
+              <h2 class="home-list">Apple</h2>
+            </a>
+          </li>
+          <li class="list-work">
+            <a class="link-fruts" href="#">
+              <h2 class="home-list">Orange</h2>
+            </a>
+          </li>
+          <li class="list-work">
+            <a class="link-fruts" href="#">
+              <h2 class="home-list">Pineapple</h2></a
+            >
+          </li>
+          <li class="list-work">
+            <a class="link-fruts" href="#">
+              <h2 class="home-list">Pear</h2>
+            </a>
+          </li>
+
+          <li class="list-work">
+            <a class="link-fruts" href="#">
+              <h2 class="home-list">Cherry</h2>
+            </a>
+          </li>
         </ol>
       </section>
     </main>
+    <!--  -->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <!-- Закрыть -->
+        <button class="button-modal" data-modal-close>
+          <svg width="18" height="18">
+            <use href="./images/close.svg#close"></use>
+          </svg>
+        </button>
+        <!--  -->
+        <form action="">
+          <input type="text" disabled /> <br />
+          <input type="text" id="message" />
+        </form>
+        <h3 id="widget-title">Сообщения:</h3>
+        <ul class="messages">
+          <li>Сообщение 1</li>
+          <li>Сообщение 2</li>
+          <li>Сообщение 3</li>
+          <li>Сообщение 4</li>
+          <li>Сообщение 5</li>
+          <li><a href="#">...</a></li>
+        </ul>
+        <a href="http://site.com/list.zip">Ссылка на архив</a>
+        <a href="http://site.com/list.pdf">Ссылка на PDF</a>
+      </div>
+    </div>
+    <!--  -->
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+        };
+
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
+
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
   </body>
 </html>
