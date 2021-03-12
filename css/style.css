@@ -188,6 +188,6 @@ ul li a{
     margin: 10px;
 }
 
-[class="messages"] {
+[class *="message"] {
     background-color: rgba(165, 42, 42, 0.24);
 }
